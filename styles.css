@@ -1,101 +1,343 @@
 /*  
 Author: Kulthida Chanana 
 File Name: styles.css
-Date: 08/27/2024
+Date: 10/31/2024
 */
 
 /*CSS reset */
-body, header, nav, main, footer, img, h1, h3 {
-margin: 0;
-padding: 0;
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h3 {
+ margin: 0;
+ padding: 0;
 }
 
 /*Style rules for body and images*/
 body {
-background-color: #f6eee4;
+ background-color: #f6eee4;
 }
 
+video,
 img {
-max-width:100%;
-display: block;
+ max-width: 100%;
+ display: block;
+}
+/* Existing styles for images and videos */
+video,
+img {
+ max-width: 100%;
+ display: block;
+}
+
+/* Style rules for skip navigation link */
+.skip {
+ position: absolute;
+ left: -999px;
+}
+
+.skip:focus {
+ color: #fff;
+ background-color: #2a1f14;
+ text-decoration: none;
+ padding: 0.5%;
+ top: auto;
+ left: auto;
+ right: 1px;
+ z-index: 1;
 }
 
 /*Style rules for navigation area*/
 nav {
-background-color:#2a1f14;
+ background-color: #2a1f14;
 }
 
-nav ul {
-list-style-type: none;
-margin:0;
-text-align: center;
+.tab-desk,
+.desktop,
+#nav-links {
+ display: none;
 }
 
-nav li {
-display: inline-block;
-font-size :1.5em;
-font-family: Geneva, Arial, sans-serif;
-font-weight: bold; 
+.mobile h1 {
+ margin: 2% 0 0 3%;
 }
 
-nav li a {
-display: block;
-color:#f6eee4;
-padding:0.5em 2em;
-text-decoration:none;
+/*DM130 Project2 Q.4*/
+.mobile-nav a {
+ color: #ffff;
+ text-align: center;
+ font-size: 2em;
+ text-decoration: none;
+ padding: 3%;
+ display: block;
 }
 
-<!--Style rules for main content-->
+.mobile-nav a.nav-icon {
+ display: block;
+ position: absolute;
+ left: 0;
+ top: 0;
+ color: #f6eee4;
+ padding: 2%;
+}
 
+.nav-icon div {
+ height: 40px;
+ width: 40px;
+ color: #2a1f14;
+}
+
+/*Q.19 Add following style rules after .tel-link a style rule:*/
+#questions p {
+ cursor: pointer;
+ text-align: start;
+}
+
+#answer {
+ text-align: center;
+ font-weight: bold;
+ width: 80%;
+ margin: O auto;
+}
+
+#answer h2 {
+ display: none;
+}
+
+/*Style rules for main content*/
 main {
-padding:2%;
-font-family:Verdana, Arial, sans-serif;
+ padding: 2%;
+ font-family: Verdana, Arial, sans-serif;
 }
 
-main p{
-font-size: 1.25em;
+main p {
+ font-size: 1.25em;
+ text-align: center;
 }
 
 main h3 {
-padding: 2%;
+ padding: 2%;
 }
 
-main ul{
-list-style-type: square;
+main ul {
+ list-style-type: square;
 }
 
 /*Style rules for class and id selectors*/
-
 .link {
-color:#4d3319;
-text-decoration: none;
-font-weight: bold;
-font-style: italic;
+ color: #4d3319;
+ text-decoration: none;
+ font-weight: bold;
+ font-style: italic;
 }
 
 .action {
-font-size: 1.75em;
-font-weight:bold;
-text-align: center;
+ font-size: 1.75em;
+ font-weight: bold;
+ text-align: center;
 }
 
-#Contact {
-text-align: center;
+#Contact,
+h2 {
+ text-align: center;
+}
+
+/* Style rules for form elements (P4)*/
+#Contact #form h2 {
+ fieldset,
+ input,
+ textarea {
+   margin-bottom: 2%;
+ }
+
+ fieldset legend {
+   font-weight: bold;
+   font-size: 1.25em;
+ }
+
+ label {
+   display: block;
+   padding-top: 2%;
+ }
+
+ form #submit {
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   padding: 2%;
+   background-color: 78593a;
+   color: f6eee4;
+   font-size: 1.25em;
+   border-radius: 10px;
+ }
 }
 
 /* Style rules for footer content */
 footer {
-    text-align: center;
-    font-size: 0.85em;
-    background-color: #2a1f14;
-    color: #f6eee4;
-    padding: 1% 0%;
+ text-align: center;
+ font-size: 0.85em;
+ background-color: #2a1f14;
+ color: #f6eee4;
+ padding: 1% 0%;
 }
 
 footer a {
-    color: #f3e6d8;
-    text-decoration: none;
+ color: #f3e6d8;
+ text-decoration: none;
 }
 
+/* New rule for images within the social class */
+.social img {
+ display: inline-block;
+ padding: 4%;
+}
 
+/* DM121 Project 4*/
+.desktop {
+ display: none;
+}
+.mobile-tablet {
+ display: block;
+}
 
+@media screen and (min-width: 780px) {
+ /* Desktop Viewport: Show desktop class, hide mobile-tablet class.*/
+ .desktop {
+   display: block;
+   font-size: 1.5em;
+   padding: 0.5em 2em;
+ }
+
+ nav li {
+   display: inline-block;
+   font-family: Geneva, Arial, sans-serif;
+   font-weight: bold;
+ }
+
+ nav li a {
+   display: block;
+   color: #f6eee4;
+   padding: 0.5em 2em;
+   text-decoration: none;
+ }
+
+ .mobile-tablet {
+   display: none;
+ }
+
+ table {
+   border: 1px solid #2a1f14;
+   border-collapse: collapse;
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ caption {
+   font-size: 1.5em;
+   font-weight: bold;
+   padding: 1%;
+ }
+
+ th,
+ td {
+   border: 1px solid #2a1f14;
+   padding: 1%;
+ }
+
+ th {
+   background-color: 2a1f14;
+   color: white;
+   font-size: 1.15em;
+ }
+
+ tr:nth-child(odd) {
+   background-color: #deccba;
+ }
+
+ form {
+   width: auto;
+ }
+
+ .form-grid {
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-gap: 20px;
+ }
+
+ .btn {
+   grid-column: 1 / span 2;
+ }
+
+ /* indens the paragraphs (P3)*/
+ .copyright p {
+   margin-left: 20px;
+ }
+}
+
+@media screen and (min-width: 420px) {
+ .tab-desk {
+   display: block;
+   font-size: 1.5em;
+ }
+ /* Tablet Viewport: Style rule for form element. */
+ form {
+   width: 70%;
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ /* Tablet Viewport: Style rules for footer area */
+
+ /* Footer style */
+ footer {
+   overflow: auto;
+ }
+
+ /* Copyright class style */
+ .copyright {
+   float: left;
+   width: 65%;
+ }
+
+ /* Social class style */
+ .social {
+  width: 5%;
+  float: right;
+  display: inline-flex;
+  padding-inline-end: 10%;
+  padding-top: 1%;
+  gap: 18px;
+}
+
+ /* DM130 Project2: Move the style rule for the nav ul selector to the tablet media query Q5*/
+ nav ul {
+   list-style-type: none;
+   margin: 0;
+   text-align: center;
+ }
+
+ nav li {
+   font-family: Geneva, Arial, sans-serif;
+   font-weight: bold;
+ }
+
+ nav li a {
+   display: block;
+   color: #f6eee4;
+   text-decoration: none;
+ }
+
+ .mobile-nav {
+   display: none;
+ }
+}
